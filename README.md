@@ -1,369 +1,338 @@
+# 🛡️ CyberDefend_SOC_Environment
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Wazuh-SIEM-blue?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Suricata-IDS%2FIPS-red?style=for-the-badge">
+  <img src="https://img.shields.io/badge/pfSense-Firewall-orange?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Sysmon-Windows%20Monitoring-green?style=for-the-badge">
+</p>
 
+<p align="center">
+  <b>Security Monitoring • Threat Detection • SOC Operations • Incident Investigation</b>
+</p>
 
-╔══════════════════════════════════════════════════════════════════╗
-║          🛡️   CyberDefend_SOC_Environment 🛡️                    ║
-║                                                                  ║
-║        Security Monitoring • Threat Detection • SOC Lab          ║
-║                                                                  ║
-║                      👨‍💻 Author: Shivam Karad                     ║
-╚══════════════════════════════════════════════════════════════════╝
+---
 
+# 👨‍💻 Author
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-📌 PROJECT OVERVIEW
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+**Shivam Karad**  
+Cybersecurity Enthusiast | SOC & DFIR Learner
 
-The Wazuh SOC Home Lab project demonstrates the deployment,
-configuration, and integration of multiple open-source cybersecurity
-tools to simulate a real-world Security Operations Center (SOC)
-environment.
+---
 
-This lab was designed to provide hands-on experience in:
+# 📌 Project Overview
 
-✔️ Security Monitoring
-✔️ Threat Detection
-✔️ Incident Investigation
-✔️ Log Analysis
-✔️ SIEM Administration
-✔️ Network Security Monitoring
-✔️ Alert Correlation
-✔️ Detection Engineering
-✔️ Threat Hunting
+This project demonstrates the deployment and integration of a complete **Security Operations Center (SOC) Home Lab** using open-source cybersecurity tools.
 
-The project uses the Wazuh SIEM/XDR platform as the central security
-monitoring solution integrated with multiple defensive technologies.
+The lab simulates real-world SOC operations including:
 
-🔧 Technologies Integrated:
+- 📊 Log Collection
+- 🚨 Threat Detection
+- 🔍 Alert Investigation
+- 🌐 Network Monitoring
+- 🛡️ Incident Response
+- 📁 File Integrity Monitoring
+- 🧠 Threat Intelligence Enrichment
 
-➤ Wazuh SIEM/XDR
-➤ Suricata IDS/IPS
-➤ pfSense Firewall
-➤ Sysmon
-➤ VirusTotal
-➤ File Integrity Monitoring (FIM)
-➤ VMware Workstation
+The environment is built around the **Wazuh SIEM/XDR platform** integrated with multiple defensive technologies.
 
-This environment demonstrates how enterprise SOC infrastructures
-collect, correlate, and analyze security events from endpoints and
-network devices in real time.
+---
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🏗️ LAB ARCHITECTURE
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# 🏗️ Lab Architecture
 
-The lab environment was deployed using VMware Workstation with
-multiple virtual machines representing different infrastructure
-components and attack scenarios.
+The SOC environment was deployed using **VMware Workstation** with multiple virtual machines representing enterprise infrastructure and attack scenarios.
 
-┌───────────────────────────────────────────────────────────────┐
-│                     🔹 WAZUH SERVER                           │
-└───────────────────────────────────────────────────────────────┘
+## 🔹 Components Used
+
+| Component | Purpose |
+|----------|----------|
+| 🖥️ Wazuh Server | Centralized SIEM/XDR Platform |
+| 💻 Windows 11 Endpoint | Endpoint Monitoring & Log Collection |
+| ⚔️ Kali Linux | Attack Simulation Machine |
+| 🔥 pfSense Firewall | Firewall & Network Monitoring |
+| 🕵️ Suricata IDS/IPS | Intrusion Detection & Prevention |
+| 📄 Sysmon | Advanced Windows Telemetry |
+| 🌍 VirusTotal | Threat Intelligence Enrichment |
+
+---
+
+# 🖥️ Wazuh Server
 
 The Wazuh Server acts as the centralized SIEM platform.
 
-Core Components:
-• Wazuh Manager
-• Wazuh Indexer
-• Wazuh Dashboard
+## Core Components
 
-Responsibilities:
-✔️ Centralized Log Collection
-✔️ Event Correlation
-✔️ Alert Generation
-✔️ Threat Monitoring
-✔️ Security Visualization
+- Wazuh Manager
+- Wazuh Indexer
+- Wazuh Dashboard
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+## Responsibilities
 
-┌───────────────────────────────────────────────────────────────┐
-│                 🔹 WINDOWS 11 ENDPOINT                        │
-└───────────────────────────────────────────────────────────────┘
+- Centralized Log Collection
+- Event Correlation
+- Alert Generation
+- Threat Monitoring
+- Security Visualization
 
-A Windows 11 Pro machine was configured as the monitored endpoint.
+---
 
-Key Features:
-✔️ Wazuh Agent Deployment
-✔️ Windows Event Log Collection
-✔️ Sysmon Integration
-✔️ File Integrity Monitoring
-✔️ Real-Time Endpoint Visibility
+# 💻 Windows 11 Endpoint
 
-The endpoint continuously forwards logs and telemetry data to the
-Wazuh server for centralized analysis.
+The Windows endpoint was configured with:
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Wazuh Agent
+- Windows Event Log Collection
+- Sysmon Integration
+- File Integrity Monitoring (FIM)
 
-┌───────────────────────────────────────────────────────────────┐
-│                🔹 KALI LINUX ATTACKER MACHINE                 │
-└───────────────────────────────────────────────────────────────┘
+## Features
 
-A Kali Linux VM was used to simulate attacker behavior.
+✅ Real-Time Monitoring  
+✅ Endpoint Visibility  
+✅ Security Event Collection  
+✅ Threat Detection Support  
 
-Activities Performed:
-⚔️ SSH Brute-Force Simulation using Hydra
-⚔️ Network Scanning
-⚔️ Threat Emulation
-⚔️ Security Testing
+---
 
-This system helped validate the detection and monitoring capabilities
-of the SOC environment.
+# ⚔️ Kali Linux Attacker Machine
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+A Kali Linux VM was used to simulate attacker activity.
 
-┌───────────────────────────────────────────────────────────────┐
-│                    🔹 PFSENSE FIREWALL                        │
-└───────────────────────────────────────────────────────────────┘
+## Activities Performed
 
-pfSense was deployed as the virtual firewall for the lab network.
+- SSH Brute-Force Simulation using Hydra
+- Network Scanning
+- Threat Emulation
+- Security Testing
 
-Functions:
-🛡️ Network Traffic Filtering
-🛡️ Firewall Policy Enforcement
-🛡️ Remote Log Forwarding
-🛡️ Traffic Monitoring
+This system validated the detection capabilities of the SOC environment.
 
-Firewall logs were integrated into Wazuh to improve network
-visibility and anomaly detection.
+---
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# 🔥 pfSense Firewall Integration
 
-┌───────────────────────────────────────────────────────────────┐
-│                    🔹 SURICATA IDS/IPS                        │
-└───────────────────────────────────────────────────────────────┘
+pfSense was deployed as the virtual firewall.
 
-Suricata was implemented to monitor malicious network activity.
+## Functions
 
-Capabilities:
-🔍 Intrusion Detection System (IDS)
-🔍 Intrusion Prevention System (IPS)
-🔍 Signature-Based Detection
-🔍 Real-Time Traffic Inspection
+- Network Traffic Filtering
+- Firewall Policy Enforcement
+- Remote Syslog Forwarding
+- Traffic Monitoring
 
-Suricata alerts were forwarded to Wazuh for centralized monitoring
-and alert correlation.
+## Detection Visibility
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🛠️ WAZUH DEPLOYMENT & CONFIGURATION
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Allowed Connections
+- Blocked Traffic
+- Authentication Events
+- Firewall Anomalies
 
-📍 STEP 1 — WAZUH SERVER & AGENT SETUP
+---
 
-Objectives:
-✔️ Deploy Wazuh using Official OVA
-✔️ Configure Wazuh Services
-✔️ Access Wazuh Dashboard
-✔️ Register Endpoint Agents
+# 🕵️ Suricata IDS/IPS Integration
 
-Implementation Highlights:
-➤ Installed Wazuh inside VMware
-➤ Verified Manager, Dashboard & Indexer Services
-➤ Configured Secure Agent Communication
-➤ Centralized Endpoint Log Collection
-➤ Tested Dashboard Visibility & Log Forwarding
+Suricata was integrated for network intrusion detection.
 
-This stage established the core SIEM infrastructure for the SOC lab.
+## Capabilities
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🔌 SECURITY TOOL INTEGRATIONS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Intrusion Detection System (IDS)
+- Intrusion Prevention System (IPS)
+- Signature-Based Detection
+- Real-Time Traffic Inspection
 
-📍 SURICATA INTEGRATION
+## Outcome
 
-Overview:
-Suricata was integrated to provide network-based intrusion detection.
+Suricata alerts were forwarded into Wazuh for centralized monitoring and correlation.
 
-Key Implementations:
-✔️ Installed Suricata with Npcap
-✔️ Configured IDS & IPS Modes
-✔️ Enabled Detection Rules
-✔️ Monitored Suspicious Traffic
-✔️ Forwarded Alerts to Wazuh
+---
 
-Outcome:
-Centralized intrusion detection monitoring inside Wazuh Dashboard.
+# 🛠️ Wazuh Deployment & Configuration
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+## Step 1 — Wazuh Server & Agent Setup
 
-📍 PFSENSE INTEGRATION
+### Objectives
 
-Overview:
-pfSense firewall logs were integrated into Wazuh.
+- Deploy Wazuh using Official OVA
+- Configure Wazuh Services
+- Access Wazuh Dashboard
+- Register Endpoint Agents
 
-Key Implementations:
-✔️ Configured Remote Syslog Forwarding
-✔️ Sent Firewall Logs to Wazuh
-✔️ Created Custom Rules & Decoders
+### Implementation Highlights
 
-Detection Capabilities:
-🔹 Allowed Connections
-🔹 Blocked Traffic
-🔹 Authentication Events
-🔹 Firewall Anomalies
+- Installed Wazuh inside VMware
+- Verified Wazuh Services
+- Configured Secure Agent Communication
+- Centralized Endpoint Log Collection
+- Tested Dashboard Monitoring
 
-Outcome:
-Improved network visibility and event correlation.
+---
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# 🔌 Security Tool Integrations
 
-📍 VIRUSTOTAL INTEGRATION
+# 📍 Suricata Integration
 
-Overview:
-VirusTotal integration was configured for threat intelligence
-enrichment.
+## Key Implementations
 
-Key Implementations:
-✔️ Configured VirusTotal API
-✔️ Enabled File Monitoring
-✔️ Triggered Automatic Hash Lookups
-✔️ Added Threat Reputation Data to Alerts
+- Installed Suricata with Npcap
+- Configured IDS & IPS Modes
+- Enabled Detection Rules
+- Monitored Suspicious Traffic
+- Forwarded Alerts to Wazuh
 
-Outcome:
-Enhanced malware investigation and faster alert triage.
+---
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# 📍 pfSense Integration
 
-📍 FILE INTEGRITY MONITORING (FIM)
+## Key Implementations
 
-Overview:
-Wazuh FIM was configured to monitor critical directories and files.
+- Configured Remote Syslog Forwarding
+- Sent Firewall Logs to Wazuh
+- Created Custom Decoders & Rules
 
-Key Features:
-✔️ Real-Time File Monitoring
-✔️ Recursive Directory Scanning
-✔️ Change Detection
-✔️ File Creation & Deletion Tracking
+---
 
-Outcome:
-Improved endpoint visibility and tamper detection.
+# 📍 VirusTotal Integration
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+## Features
 
-📍 WINDOWS LOGS & SYSMON INTEGRATION
+- VirusTotal API Integration
+- Automatic Hash Reputation Lookup
+- Malware Reputation Enrichment
+- Faster Threat Investigation
 
-Overview:
-Sysmon was deployed to improve endpoint telemetry and forensic
-visibility.
+---
 
-Collected Events:
-📄 Process Creation
-📄 Network Connections
-📄 Registry Changes
-📄 Authentication Events
-📄 File Modifications
+# 📍 File Integrity Monitoring (FIM)
 
-Outcome:
-Enhanced detection depth and advanced threat visibility.
+## Features
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🔐 BRUTE FORCE ATTACK SIMULATION & DETECTION
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Real-Time File Monitoring
+- Recursive Directory Scanning
+- File Change Detection
+- Unauthorized Modification Alerts
 
-A controlled brute-force attack simulation was performed using Hydra
-from the Kali Linux attacker machine.
+---
 
-Attack Activities:
-⚔️ Multiple Failed Login Attempts
-⚔️ SSH Authentication Attacks
-⚔️ Realistic Brute-Force Patterns
+# 📍 Sysmon & Windows Logs Integration
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+## Monitored Events
 
-📍 DETECTION & INVESTIGATION
+- Process Creation
+- Network Connections
+- File Modifications
+- Registry Changes
+- Authentication Events
+
+## Outcome
+
+Enhanced forensic visibility and advanced threat detection.
+
+---
+
+# 🔐 Brute Force Attack Simulation & Detection
+
+A controlled brute-force attack simulation was performed using Hydra from the Kali Linux attacker machine.
+
+## Attack Activities
+
+- Multiple Failed Login Attempts
+- SSH Authentication Attacks
+- Brute-Force Simulation
+
+## Wazuh Detection
 
 Wazuh successfully detected:
 
-✔️ Repeated Authentication Failures
-✔️ Suspicious Login Activity
-✔️ Brute-Force Attack Patterns
+- Repeated Authentication Failures
+- Suspicious Login Attempts
+- Brute-Force Attack Patterns
 
-Important Windows Event IDs:
-🔹 Event ID 4625 — Failed Login Attempt
+## Important Event IDs
 
-Alert Correlation Identified:
-➤ High-Frequency Failed Logins
-➤ Suspicious IP Addresses
-➤ Authentication Anomalies
+| Event ID | Description |
+|----------|-------------|
+| 4625 | Failed Login Attempt |
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+---
 
-📍 DEFENSIVE MEASURES IMPLEMENTED
+# 🛡️ Defensive Measures Implemented
 
-🛡️ Strong Password Policies
-🛡️ Multi-Factor Authentication (MFA)
-🛡️ Account Lockout Policies
-🛡️ Wazuh Active Response
-🛡️ Firewall-Based Blocking
+- Strong Password Policies
+- Multi-Factor Authentication (MFA)
+- Account Lockout Policies
+- Wazuh Active Response
+- Firewall-Based Blocking
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-📊 SKILLS DEMONSTRATED
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+---
 
-✔️ SIEM/XDR Deployment
-✔️ Wazuh Administration
-✔️ SOC Monitoring
-✔️ Threat Detection
-✔️ IDS/IPS Configuration
-✔️ Firewall Log Analysis
-✔️ Sysmon Deployment
-✔️ Threat Intelligence Integration
-✔️ File Integrity Monitoring
-✔️ Incident Investigation
-✔️ Rule Tuning & Decoders
-✔️ Attack Simulation
-✔️ VMware Virtualization
-✔️ Network Security Monitoring
+# 📊 Skills Demonstrated
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🎯 PROJECT OUTCOME
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- SIEM/XDR Deployment
+- Wazuh Administration
+- SOC Monitoring
+- Threat Detection
+- IDS/IPS Configuration
+- Firewall Log Analysis
+- Sysmon Deployment
+- Threat Intelligence Integration
+- File Integrity Monitoring
+- Incident Investigation
+- Rule Tuning & Decoders
+- Attack Simulation
+- VMware Virtualization
+- Network Security Monitoring
 
-This SOC Home Lab successfully replicated key functions of a modern
-Security Operations Center using open-source technologies.
+---
 
-The environment demonstrated:
+# 🎯 Project Outcome
 
-✔️ Centralized Security Visibility
-✔️ Multi-Source Log Ingestion
-✔️ Real-Time Alerting
-✔️ Threat Detection Workflows
-✔️ Security Event Investigation
-✔️ Defensive Monitoring Capabilities
+This SOC Home Lab successfully replicated key functions of a modern Security Operations Center using open-source technologies.
 
-The integration of Wazuh, Suricata, pfSense, Sysmon, and VirusTotal
-created a layered monitoring architecture capable of detecting both
-endpoint and network-based threats.
+## The environment demonstrated:
 
-The project also provided hands-on experience with realistic SOC
-analyst responsibilities including:
+✅ Centralized Security Visibility  
+✅ Multi-Source Log Ingestion  
+✅ Real-Time Alerting  
+✅ Threat Detection Workflows  
+✅ Security Event Investigation  
+✅ Defensive Monitoring Capabilities  
 
-🔎 Alert Triage
-🔎 Threat Hunting
-🔎 Detection Engineering
-🔎 Log Investigation
-🔎 Incident Analysis
-🔎 Security Monitoring Operations
+The integration of Wazuh, Suricata, pfSense, Sysmon, and VirusTotal created a layered monitoring architecture capable of detecting both endpoint and network-based threats.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-⚠️ ETHICAL USE NOTICE
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+---
 
-This project was created strictly for educational and defensive
-security purposes inside an isolated lab environment.
+# ⚠️ Ethical Use Notice
 
-All attack simulations and testing activities were performed only on
-authorized systems owned within the lab infrastructure.
+This project was created strictly for **educational and defensive security purposes** inside an isolated lab environment.
 
-❌ Do NOT use these techniques against unauthorized or production
-systems.
+All attack simulations and testing activities were conducted only on authorized systems owned within the lab infrastructure.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-👨‍💻 AUTHOR
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+> ❌ Do NOT use these techniques against unauthorized or production systems.
 
-Shivam Karad
-Cybersecurity Enthusiast | SOC & DFIR Learner | Security Monitoring
+---
 
-╔══════════════════════════════════════════════════════════════════╗
-║                    🚀 END OF DOCUMENT 🚀                        ║
-╚══════════════════════════════════════════════════════════════════╝
+# 📂 Documentation
+
+## Included Guides
+
+- Wazuh Setup Guide
+- Suricata Integration Guide
+- pfSense Integration Guide
+- VirusTotal Integration Guide
+- File Integrity Monitoring Guide
+- Sysmon Integration Guide
+- Brute Force Detection Guide
+
+---
+
+# 📌 Connect With Me
+
+- 💼 LinkedIn
+- ✍️ Medium
+- 💻 GitHub
+
+---
+
+<p align="center">
+  <b>🛡️ Wazuh SOC Home Lab — Built for Learning, Monitoring & Threat Detection 🛡️</b>
+</p>
