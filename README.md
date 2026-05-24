@@ -325,14 +325,6 @@ All attack simulations and testing activities were conducted only on authorized 
 
 ---
 
-# 📌 Connect With Me
-
-- 💼 LinkedIn
-- ✍️ Medium
-- 💻 GitHub
-
----
-
 <p align="center">
   <b>🛡️ Wazuh SOC Home Lab — Built for Learning, Monitoring & Threat Detection 🛡️</b>
 </p>
